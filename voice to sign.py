@@ -1,11 +1,10 @@
 import os
-import speech_recognition as sr
+
 from PIL import Image
 import streamlit as st
 import time
 
-# initialize the speech recognition engine
-r = sr.Recognizer()
+
 
 # define function to display sign language images
 def display_images(text):
@@ -23,7 +22,7 @@ def display_images(text):
             img = Image.open(img_path)
 
             # update the position of the image
-            image_pos.image(img, width=150)
+            image_pos.image(img, width=500)
 
             # wait for 2 seconds before displaying the next image
             time.sleep(2)
@@ -36,7 +35,7 @@ def display_images(text):
             img = Image.open(img_path)
 
             # update the position of the image
-            image_pos.image(img, width=150)
+            image_pos.image(img, width=500)
 
             # wait for 2 seconds before displaying the next image
             time.sleep(2)
@@ -49,24 +48,12 @@ def display_images(text):
     image_pos.empty()
 
 
-# add start button to start recording audio
-if st.button("Start"):
-    # record audio for 5 seconds
-    with sr.Microphone() as source:
-        st.write("Say something!")
-        audio = r.listen(source, phrase_time_limit=5)
 
-        try:
-            text = r.recognize_google(audio)
-        except sr.UnknownValueError:
-            st.write("Sorry, I did not understand what you said.")
-        except sr.RequestError as e:
-            st.write(f"Could not request results from Google Speech Recognition service; {e}")
 
+text = st.text_input("Enter text:")
     # convert text to lowercase
-    text = text.lower()
-    # display the final result
-    st.write(f"You said: {text}")
+text = text.lower()
+
 
     # display sign language images
-    display_images(text)
+display_images(text)
