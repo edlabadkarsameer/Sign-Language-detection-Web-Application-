@@ -1,0 +1,10 @@
+opencv-python
+temp
+streamlit
+mediapipe
+numpy
+Pillow
+time
+os
+pyaudio
+SpeechRecognition

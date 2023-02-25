@@ -1,0 +1,1 @@
+web: streamlit run Sign_language_detetion.py
