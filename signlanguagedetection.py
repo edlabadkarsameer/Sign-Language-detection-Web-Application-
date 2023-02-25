@@ -68,7 +68,7 @@ def image_resize(image, width=None, height=None, inter=cv2.INTER_AREA):
     return resized
 
 app_mode = st.sidebar.selectbox('Choose the App mode',
-['About App','Sign Language to Text','Speech to sign Language']
+['About App','Sign Language to Text','Text to sign Language']
 )
 
 if app_mode =='About App':
@@ -313,7 +313,7 @@ elif app_mode == 'Sign Language to Text':
     vid.release()
     out.release()
 else:
-    st.title('Speech to Sign Language (The System use Indian Sign Language)')
+    st.title('Text to Sign Language (The System use Indian Sign Language)')
 
 
     # define function to display sign language images
@@ -335,7 +335,7 @@ else:
                 image_pos.image(img, width=500)
 
                 # wait for 2 seconds before displaying the next image
-                time.sleep(2)
+                time.sleep(1)
 
                 # remove the image
                 image_pos.empty()
@@ -348,7 +348,7 @@ else:
                 image_pos.image(img, width=500)
 
                 # wait for 2 seconds before displaying the next image
-                time.sleep(2)
+                time.sleep(1)
 
                 # remove the image
                 image_pos.empty()
