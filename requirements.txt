@@ -4,8 +4,5 @@ streamlit
 mediapipe
 numpy
 Pillow
-
-portaudio==19.6.0.1
-
 pyaudio
 SpeechRecognition
