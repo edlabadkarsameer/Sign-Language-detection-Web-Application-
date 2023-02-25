@@ -2,7 +2,7 @@ pyvirtualdisplay==2.2
 xvfbwrapper==0.2.9
 
 
-libgl1-mesa-glx
+
 opencv-python
 temp
 streamlit
