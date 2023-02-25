@@ -1,3 +1,8 @@
+pyvirtualdisplay==2.2
+xvfbwrapper==0.2.9
+apt-get update
+apt-get install -y libgl1-mesa-glx
+
 libgl1-mesa-glx
 opencv-python
 temp
