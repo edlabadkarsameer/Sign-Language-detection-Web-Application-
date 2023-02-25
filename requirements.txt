@@ -5,6 +5,6 @@ mediapipe
 numpy
 Pillow
 
-os
+
 pyaudio
 SpeechRecognition
