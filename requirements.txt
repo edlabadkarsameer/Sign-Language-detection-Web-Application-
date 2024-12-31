@@ -4,4 +4,6 @@ temp
 streamlit
 mediapipe
 Pillow
+pyaudio
+SpeechRecognition
 
